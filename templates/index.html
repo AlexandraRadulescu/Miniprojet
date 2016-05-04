@@ -1,18 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
- 
 <head>
     <title>Randomizer</title>
+    <style>
+        body {
+          text-align: center;
+        }
+        #display {
+          width: 128px;
+          height: 36px;
+          line-height: 36px;
+          font-size: 20px;
+          border: 3px solid #3498db;
+          text-align: center;
+          margin-bottom: 6px;
+          margin-top: 10px;
+          display: inline-block;
+        }
+    
+        .btn {
+          background: #3498db;
+          border-radius: 28px;
+          font-family: Arial;
+          color: #ffffff;
+          font-size: 20px;
+          padding: 10px 20px 10px 20px;
+          text-decoration: none;
+          display: inline-block;
+        }
+    
+        .btn:hover {
+          background: #3cb0fd;
+          text-decoration: none;
+        }
+    </style>
+
 </head>
  
 <body>
-
+	Press the button to generate<br>a random number<br>between 0 and 100.<br>
+	
+	<div id="display">
 	{% if random != None %}
 	   {% print random %}
 	{% endif %}
-        
-    <form action="/makerand" method="post">
-    	<button type="submit">Generate</button>
+        </div>
+
+        <form action="/makerand" method="post">
+    		<button class="btn" type="submit">Generate</button>
 	</form>
  
 </body>
